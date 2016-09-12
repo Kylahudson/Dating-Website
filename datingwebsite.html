@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build-a-Bae</title>
+    <style type="text/css">
+        Fieldset{
+            Background: lightyellow;
+            Border: 10px solid yellow;
+            Margin-bottom:10px;
+            Width:720px;
+        }
+        label{
+            width:180px;
+            display:inline-block;
+            text-align:right;
+            vertical-align:top;
+
+        }
+
+
+        textarea{
+            width:360px;
+            height:50px;
+        }
+        div.radio {
+            width:auto;
+
+        }
+        div.checkbox {
+            width:auto;
+        }
+        h4.Salary {
+            display: inline;
+            font-weight: normal;
+            color: white;
+            background-color: purple;
+            border: 2px solid purple;
+            padding-left:7px ;
+            padding-right: 7px;
+            text-align: center;
+        }
+        h4.Height {
+            display: inline;
+            font-weight: normal;
+            color: white;
+            background-color: #a70e03;
+            border: 2px solid #a70e03;
+            vertical-align: top;
+
+        }
+        h4.Poor {
+            display: inline;
+            font-weight: normal;
+            color: white;
+            background-color: #a70e03;
+            border: 2px solid #a70e03;
+            padding-left: 3px;
+            padding-right: 2.5px;
+            text-align: center;
+            vertical-align: top;
+        }
+        h4.Rich {
+            display: inline;
+            font-weight: normal;
+            color: white;
+            background-color: purple;
+            border: 2px solid purple;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+
+        input.align {
+            display: table-cell;
+            vertical-align: middle;
+            height: 6px;
+            border: 1px solid ;
+            padding-left: 2.5px;
+        }
+
+
+
+
+
+    </style>
+
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+
+          rel="stylesheet" type="text/css" />
+
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    <style>
+
+        article, aside, figure, footer, header,hgroup,
+
+        menu, nav, section { display: block; }
+
+    </style>
+
+
+
+</head>
+<body>
+  <h1> Please Enter Your Details For Our dating Website!</h1>
+   <fieldset> <legend> Your face</legend>
+      <label for="blah">Your Image:</label>
+       <input  type='file' onchange="readURL(this);"/> <br>
+       <label for="preview">Image preview:</label>
+       <img id="blah" src="#" alt="your image"  type="file" id="Image" name="Image"[required]>
+       <img id="preview">
+    </fieldset>
+    <fieldset>
+        <legend>
+            Your general details
+        </legend>
+        <label for="Your name">Name:</label>
+        <input type="text"
+               id="Your name"
+               name="Your name"
+               required><br>
+        <div class="radio">
+        <label for="Gender">Gender:</label>
+         <input type="radio"
+                name="gender"
+                id="Gender"
+                value="male"
+                required>Male
+        <input type="radio"
+               name="gender"
+               id="fender"
+               value="female"
+               required>Female<br>
+            </div>
+        <label for="age">Age:</label>
+        <input type="number"
+               id="age"
+               name="age"
+               required><br>
+        <label>Date of Birth:</label>
+        <input type="date"
+               id="date"
+               name="date"><br>
+        <label for="color"> Favorite Color:</label>
+        <input type="color"
+               id="color"
+               name="color"><br>
+        <label>Which Country:</label>
+        <select>
+            <option value="America">America</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Asia">Asia</option>
+            <option value="China">China</option>
+            <option value="no selection">No Selection</option>
+        </select>
+        </fieldset>
+        <fieldset>
+            <legend>Your indicators</legend>
+            <label>Height:</label>
+
+            <h4 class="Poor">Poor</h4>
+            <input type="range" min="0" max="100"><h4 class="Rich">Rich</h4>
+            <br>
+            <label>Salary:</label>
+            <h4 class="Height">Short</h4><input type="range" min="0" max="100"> <h4 class="Salary">Tall</h4>
+
+    </fieldset>
+    <fieldset>
+        <legend>Your Contact Information</legend>
+        <Label>Email:</Label>
+        <input type="email" required><br>
+        <label>Telephone:</label>
+        <input type="tel"><br>
+        <label>Address:</label>
+        <textarea>
+        </textarea><br>
+        <div class="checkbox">
+        <label>Method to contact you:</label>
+        <input type="checkbox"
+               id="email"
+               name="email">Email
+        <input type="checkbox"
+               id="Whatsapp"
+               name="Whatsapp">Whatsapp
+        <input type="checkbox"
+               id="In-app chat"
+               name="In-app chat">In-app chat
+            </div>
+
+    </fieldset>
+     <input type="submit" id="submit" name="submit">
+
+
+       <script type="text/javascript">
+
+               function readURL(input) {
+
+                   if (input.files && input.files[0]) {
+
+                       var reader = new FileReader();
+
+                       reader.onload = function (e) {
+
+                           $('#blah')
+
+                                   .attr('src', e.target.result)
+
+                                   .width(150)
+
+                                   .height(200);
+
+                       };
+
+                       reader.readAsDataURL(input.files[0]);
+
+                   }
+
+               }
+
+
+   </script>
+</body>
+</html>
